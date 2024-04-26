@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         if (currentFragment == null) {
             // if the current fragment is non existent, create a new crime fragment
-            val fragment = CrimeFragment()
+            val fragment = CrimeListFragment.newInstance()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)

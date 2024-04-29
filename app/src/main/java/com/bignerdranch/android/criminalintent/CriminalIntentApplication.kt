@@ -1,4 +1,11 @@
 package com.bignerdranch.android.criminalintent
 
-class CriminalIntentApplication {
+import android.app.Application
+
+class CriminalIntentApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        CrimeRepository.initialize(this)
+    }
 }
